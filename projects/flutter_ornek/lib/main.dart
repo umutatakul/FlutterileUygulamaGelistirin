@@ -2,29 +2,31 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui show Canvas, Paint, Path;
 
-final globalA = "global değişken a";
 void main() {
-  print(globalA);
-  final a = "a";
-  final maindekiA
-  = "a";
-  final d = "değişken" + maindekiA;
-  print("main çalıştı");
-  altProgram();
-  if (1==1) {
+  int i = 1;
+  double d = 1.1;
 
-    final a = "içerdeki a";
-    print(a);
-  }
-}
+  num n1 = i;
+  num n2 = d;
 
-void altProgram() {
-  print(globalA);
-  print("alt program çalıştı.");
-  final a = "başka bir a";
-  print(a);
-}
+  print(i);
+  print(d);
 
-class C{
-  int a = 1;
+  print(n1);
+  print(n2);
+
+  String s = """mer
+  haba
+  ${i.isEven}
+  """;
+  print(s);
+
+  String ss = i.toString();
+
+  final l = [1, 2, 3];
+  final set = {1,2,3};
+  final map = {"a":1, "b":2, "c":3};
+  Object o ;
+  dynamic dd;
+
 }
