@@ -3,30 +3,36 @@ import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui show Canvas, Paint, Path;
 
 void main() {
-  int i = 1;
-  double d = 1.1;
+  print("Hoş geldiniz");
 
-  num n1 = i;
-  num n2 = d;
+  var mesajSayisi = 2;
 
-  print(i);
-  print(d);
+  if (mesajSayisi == 0) {
+    print("yeni mesajınız var");
+  } else if (mesajSayisi == 1) {
+    print("Mesaj sayınız 1");
+  } else if (mesajSayisi == 2) {
+    print("Mesaj sayınız 2");
+  } else {
+    print("Çok mesja var");
+  }
 
-  print(n1);
-  print(n2);
+  switch(mesajSayisi){
+    case 0:
+      print("Sıfır mesaj");
+      break;
+    case 1:
+      print("Bir mesaj");
+      break;
+    case 2:
+      print("İki mesaj");
+      break;
+    default:
+      print("Çok mesaj");
+  }
 
-  String s = """mer
-  haba
-  ${i.isEven}
-  """;
-  print(s);
-
-  String ss = i.toString();
-
-  final l = [1, 2, 3];
-  final set = {1,2,3};
-  final map = {"a":1, "b":2, "c":3};
-  Object o ;
-  dynamic dd;
-
+  //Tenary operator
+  //ıf gibi bir dallanma değil bir exrpession
+  print(mesajSayisi > 0 ? "yeni mesajınız var" : "yeni mesajın yok");
+  print("$mesajSayisi adet okunmamış mesajınız vardır");
 }
