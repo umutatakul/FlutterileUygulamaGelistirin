@@ -2,23 +2,22 @@ import 'package:flutter/material.dart';
 import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui show Canvas, Paint, Path;
 
+typedef KonuVeEylemFunc = String Function({String eylem, required String konu});
+
 void main() {
-  print('a'.isNotEmpty);
-  print(1.isEven);
-  var i = 1;
-  print(i);
-  String mainTekCal;
-  mainTekCal = "main" + "tekrar" + "çalıştı ";
+ print("main çalıştı");
+ var konu = "flutter";
+ var eylem = "öğreniyorum";
 
-  print(mainTekCal);
+KonuVeEylemFunc f = ({required String konu, String eylem = ""}) => konu+' '+eylem;
 
-  int ii = findAr(mainTekCal);
-  print(ii);
+ String hepsi = f(konu: konu, eylem: eylem);
+ print(hepsi);
 
-  print("main bitmek üzere");
+
 }
 
-int findAr(String s) {
-  var index = s.indexOf("ar");
-  return index;
-}
+void dondur() => 12;
+void dondur(int sayi) => 12;
+
+
