@@ -11,13 +11,15 @@ void main() {
 void returnEdecek() {
   try {
     print(">main");
-    return;
+
     hataliKodCagiran();
     print("<main");
   } on FormatException catch (e) {
     print("format excepiton oldu");
+    rethrow;
   } catch (e) {
     print("başka bir  hata oldu");
+    print(e);
   }finally{
     print("FINALLY");
   }
@@ -32,6 +34,7 @@ void hataliKodCagiran() {
 
 void hataliKod() {
   print(">hatalı kod");
+  throw new Exception("HATA VAR");
   double.parse("bu bir double değer değildir");
   String? s = null;
   print(s!.length);
