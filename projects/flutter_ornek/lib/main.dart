@@ -3,7 +3,15 @@ import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui show Canvas, Paint, Path;
 
 void main() {
-  final etiketler = {
+  final  mesajlar = <String>[];
+
+  mesajlar.add("a");
+  //aşağıdaki gibi eksili indexi dart kabul etmiyor!!!!!!
+  print(mesajlar[-1]);
+
+final Set<String> arkadaslar = {"ali","ayşe","mehmet"};
+
+  final Map<String, int> etiketler = {
     "arkadaşlar": 1,
     "okul": 3,
     "iş": 5,
