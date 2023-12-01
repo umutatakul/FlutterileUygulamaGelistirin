@@ -3,18 +3,21 @@ import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui show Canvas, Paint, Path;
 
 void main() {
-  final liste = [
-     {"a","b"},
-     {"c","d"},
-     {"e","f"},
-  ];
 
-  print(liste);
+  var liste1 = [1,2,3,];
+  var liste2 = [4,5,6,];
 
-  final ikinci = liste[1];
-  print(ikinci);
-  ikinci.remove("c");
-  print(ikinci);
-  print(liste);
+  print("liste1 : $liste1");
+  print("liste2 : $liste2");
 
+  liste1 = liste2;
+
+  print("liste1 : $liste1");
+  print("liste2 : $liste2");
+
+  liste1[1] = 10;
+  print("10 yaptıktan sonra");
+
+  print("liste1 : $liste1");
+  print("liste2 : $liste2");
 }
