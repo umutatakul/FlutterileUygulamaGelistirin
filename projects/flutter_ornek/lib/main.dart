@@ -20,4 +20,13 @@ void main() {
 
   print("liste1 : $liste1");
   print("liste2 : $liste2");
+
+  int a = 5;
+  int b = 5;
+
+  String s = "merhaba";
+  final s2 = s.replaceFirst("er", "to");
+  print(s);
+  print(s2);
+
 }
