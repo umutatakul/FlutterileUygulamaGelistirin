@@ -3,25 +3,25 @@ import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui show Canvas, Paint, Path;
 
 void main() {
-  final arkadaslar = {"ali", "ayşe", "mehmet"};
-  print(arkadaslar);
+  final etiketler = {
+    "arkadaşlar": 1,
+    "okul": 3,
+    "iş": 5,
+  };
+  print(etiketler);
+  //ilk kısım keyler ikinci ksıım caluelar keyleri kulalnarak valuelara ulaşabiliyoruz.
 
-  arkadaslar.add("fatma");
-  print(arkadaslar);
-  print("----------fatma tekrar eklendi----------");
-  arkadaslar.add("fatma");
-  print(arkadaslar);
+  print(etiketler["iş"]);
 
-  //sırasız olsa da bunlar çalışıyor
-  print(arkadaslar.first);
-  print(arkadaslar.last);
+  etiketler["iş"] = 7;
+  print(etiketler);
 
-  print(arkadaslar.length);
-
-  //Kümelre özel kesişimlerini bulma imkanı da sağlıyor
-  final i = arkadaslar.intersection({"ayşe","mehmet","aaaa"});
-  print(i);
-
-
-
+  if (etiketler.isNotEmpty) {
+    print("Boş değil");
+  }
+  print(etiketler.containsKey("iş"));
+  
+  for(final entry in etiketler.entries){
+    print("${entry.key} : ${entry.value}" );
+  }
 }
