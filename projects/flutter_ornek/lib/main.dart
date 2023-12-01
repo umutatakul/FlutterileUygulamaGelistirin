@@ -29,4 +29,8 @@ void main() {
   print(s);
   print(s2);
 
+  /*int, double, String gibi, boolean gibi temel veri türleri değişmez, yani immutable. Fakat List, Set ve Map gibi türler değişir, yani mutable nesnelerdir.
+
+   */
+
 }
