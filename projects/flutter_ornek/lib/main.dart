@@ -3,33 +3,18 @@ import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui show Canvas, Paint, Path;
 
 void main() {
-  final  mesajlar = <String>[];
+  final liste = [
+     {"a","b"},
+     {"c","d"},
+     {"e","f"},
+  ];
 
-  mesajlar.add("a");
-  //aşağıdaki gibi eksili indexi dart kabul etmiyor!!!!!!
-  print(mesajlar[-1]);
+  print(liste);
 
-final Set<String> arkadaslar = {"ali","ayşe","mehmet"};
+  final ikinci = liste[1];
+  print(ikinci);
+  ikinci.remove("c");
+  print(ikinci);
+  print(liste);
 
-  final Map<String, int> etiketler = {
-    "arkadaşlar": 1,
-    "okul": 3,
-    "iş": 5,
-  };
-  print(etiketler);
-  //ilk kısım keyler ikinci ksıım caluelar keyleri kulalnarak valuelara ulaşabiliyoruz.
-
-  print(etiketler["iş"]);
-
-  etiketler["iş"] = 7;
-  print(etiketler);
-
-  if (etiketler.isNotEmpty) {
-    print("Boş değil");
-  }
-  print(etiketler.containsKey("iş"));
-  
-  for(final entry in etiketler.entries){
-    print("${entry.key} : ${entry.value}" );
-  }
 }
