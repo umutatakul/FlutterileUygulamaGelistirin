@@ -4,26 +4,17 @@ import 'dart:ui' as ui show Canvas, Paint, Path;
 
 void main() {
  print("merhaba");
-
- //non-nullable
-  String s;
-
-  s = "ali";
-  print(s);
-  print(s.length);
-
-  String? sn;
-  sn = getAli();
-
-  print(sn);
-
-  /*if (sn != null) {
-   print(sn.length);
-
-  }*/
- print(sn?.length);
+ try{
+    double.parse("bu bir double değer değildir");
+    String? s = null;
+    print(s!.length);
+  }on FormatException catch(e){
+   print("format excepiton oldu");
+ }catch(e){
+   print("başka bir  hata oldu");
+ }
 }
 
-String? getAli() => "ali";
+
 
 
