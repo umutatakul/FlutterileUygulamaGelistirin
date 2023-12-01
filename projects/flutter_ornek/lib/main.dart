@@ -1,5 +1,12 @@
+import 'package:english_words/english_words.dart';
+import 'package:uuid/uuid.dart';
+
 void main() {
- const i = 5;
- print(i);
- print("merhaba!");
+  print("merhaba!");
+
+  print(generateWordPairs().first);
+
+  var uuid = Uuid();
+  var v1 = uuid.v1();
+  print(v1);
 }
