@@ -13,4 +13,49 @@ void main() {
   };
 
   print(ogrenci);
+  final ali = Ogrenci("Ali", "Yılmaz", 23, "erkek", 100);
+  final veli = Ogrenci("Veli", "Yılmaz", 19, "erkek", 80);
+  print(ali.adi);
+  print(ali);
+  print(veli);
+  if (ali.ortalamaininUstundeMi(90)) {
+    print("bravo ali");
+  }
+  if (veli.ortalamaininUstundeMi(90)) {
+    print("bravo veli");
+  }
+  print(ali.adiSoyadi);
+  ali.adiSoyadi = "Cemil Çelik";
+  print(ali.adiSoyadi);
+  print(ali.adi);
+  print(ali.soyadi);
+
+}
+
+class Ogrenci {
+  String adi;
+  String soyadi;
+  int yasi;
+  String cinsiyeti;
+  int notu;
+  bool mezunMu;
+
+  Ogrenci(this.adi, this.soyadi, this.yasi, this.cinsiyeti, this.notu) : mezunMu = false;
+
+  bool ortalamaininUstundeMi(int ortalama){
+    return notu > ortalama;
+  }
+
+  String get adiSoyadi => "$adi $soyadi";
+  set adiSoyadi(String value){
+    int bosluk = value.indexOf(" ");
+    adi = value.substring(0,bosluk);
+    soyadi = value.substring(bosluk+1);
+
+  }
+
+  @override
+  String toString() {
+    return "$adi $soyadi $yasi $cinsiyeti $notu $mezunMu";
+  }
 }
