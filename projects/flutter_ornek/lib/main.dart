@@ -3,48 +3,25 @@ import 'package:flutter/widgets.dart';
 import 'dart:ui' as ui show Canvas, Paint, Path;
 
 void main() {
-  final mesajlar = ["a", "b", "c"];
-  print(mesajlar);
-  
-  print(mesajlar[0]);
+  final arkadaslar = {"ali", "ayşe", "mehmet"};
+  print(arkadaslar);
 
-  mesajlar.add("d");
+  arkadaslar.add("fatma");
+  print(arkadaslar);
+  print("----------fatma tekrar eklendi----------");
+  arkadaslar.add("fatma");
+  print(arkadaslar);
 
-  print(mesajlar);
+  //sırasız olsa da bunlar çalışıyor
+  print(arkadaslar.first);
+  print(arkadaslar.last);
 
-  mesajlar.addAll(["e","f"]);
+  print(arkadaslar.length);
 
-  print(mesajlar);
+  //Kümelre özel kesişimlerini bulma imkanı da sağlıyor
+  final i = arkadaslar.intersection({"ayşe","mehmet","aaaa"});
+  print(i);
 
-  print("${mesajlar.length} adet mesajınız bulunmaktadır");
 
-  if(mesajlar.contains("a")){
-    print("a var");
-  }else{
-    print("a yok");
-  }
 
-  mesajlar[0] = "A";
-
-  print(mesajlar);
-
-  mesajlar.remove("A");
-  print(mesajlar);
-
-  mesajlar.removeAt(1);
-  print(mesajlar);
-
-  print(mesajlar.first);
-  print(mesajlar.last);
-
-  if (mesajlar.isNotEmpty) {
-    print("Boş değil");
-
-  }else{
-    print("Boş");
-  }
-
-  for (final mesaj in mesajlar){
-    print(mesaj);
-  }
 }
